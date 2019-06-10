@@ -4,7 +4,7 @@ Sample Project ini akan menjelaskan cara kerja Redux dan cara memimplementasikan
 
 # Digging Deeper with Redux
 a. App Mockup and Approach
-![Project Outline](https://github.com/elvinotan/react-native-techstack/tree/master/images)</br>
+![Project Outline](https://github.com/elvinotan/react-native-techstack/blob/master/images/project.png)</br>
 
 
 b. The Basics of Redux
