@@ -1,12 +1,35 @@
 import React, { Component } from "react";
-import { Text, TouchableWithoutFeedback, View } from "react-native";
+import {
+  Text,
+  TouchableWithoutFeedback,
+  View,
+  LayoutAnimation,
+  Platform,
+  UIManager
+} from "react-native";
 import { CardSection } from "./commons";
 import { selectLibrary } from "../actions";
 import { connect } from "react-redux";
 
 class ListItem extends Component {
+  constructor() {
+    super();
+    if (Platform.OS === "android") {
+      UIManager.setLayoutAnimationEnabledExperimental &&
+        UIManager.setLayoutAnimationEnabledExperimental(true);
+    }
+  }
+
+  componentWillUpdate() {
+    LayoutAnimation.spring();
+  }
+
   renderExpand(expanded, desription) {
-    return expanded ? <Text>{desription}</Text> : null;
+    return expanded ? (
+      <CardSection>
+        <Text style={{ flex: 1 }}>{desription}</Text>
+      </CardSection>
+    ) : null;
   }
 
   render() {
@@ -40,7 +63,9 @@ const mapStateToPros = (state, ownProps) => {
   };
 };
 
+const mapActionToProps = { selectLibrary };
+
 export default connect(
   mapStateToPros,
-  { selectLibrary }
+  mapActionToProps
 )(ListItem);

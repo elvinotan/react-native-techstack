@@ -361,4 +361,23 @@ const mapStateToPros = (state, ownProps) => {
 ```
 
 l. Animations</br>
+Animasi pada react native berasal ari AnimationLayout yang ada di package react-native</br>
+Cara kerja dari dari Animation adalah, pada saat kita terima data dari action creator otomatis props akan berubah, dan ini kan mentrigger untuk melakukan rerendring, yang kita perlu lakukan adalah intercept sebelum rendering terjadi dengan Animation, oleh sebab itu method Animasi ada di componentWillUpdate</br>
+Note:</br>
+Untuk android, animasi ada masalah dan perlu di tambahkan coding di bagian constructor
+
+```
+  constructor() {
+    super();
+    if (Platform.OS === "android") {
+      UIManager.setLayoutAnimationEnabledExperimental &&
+        UIManager.setLayoutAnimationEnabledExperimental(true);
+    }
+  }
+
+  componentWillUpdate() {
+    LayoutAnimation.spring();
+  }
+```
+
 m. Wrapup</br>
