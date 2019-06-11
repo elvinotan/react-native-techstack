@@ -233,7 +233,7 @@ const styles = {
 ```
 
 e. Creating the Selection Reducer</br>
-Untuk membuat reducer wajib mengembalikan sesuatu dan sesuatu itu tidak boleh undefine, untuk data initial biasanya gunakan null, null != undefine</br>
+Untuk membuat reducer wajib mengembalikan sesuatu dan sesuatu itu tidak boleh undefine, untuk data initial biasanya gunakan null, null != undefined</br>
 
 ```
 /src/reducers/SelectionReducer.js
