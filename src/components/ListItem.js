@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { Text } from "react-native";
 import { CardSection } from "./commons";
+import { selectLibrary } from "../actions";
+import { connect } from "react-redux";
 
 class ListItem extends Component {
   render() {
+    console.log(this.props);
     const { titleStyle } = styles;
     return (
       <CardSection>
@@ -20,4 +23,15 @@ const styles = {
   }
 };
 
-export default ListItem;
+const mapStateToPros = state => {
+  return {
+    reducer: {
+      selectedLibraryId: state.selectedLibraryId
+    }
+  };
+};
+
+export default connect(
+  mapStateToPros,
+  { selectLibrary }
+)(ListItem);

@@ -255,7 +255,31 @@ export default combineReducers({
 ```
 
 f. Introducing Action Creators</br>
+![Flow](https://github.com/elvinotan/react-native-techstack/blob/master/images/flow.png)</br>
+
+Untuk membuat action kita butuh sebuah action creator
+
+```
+export const selectLibrary = libraryId => {
+  return {
+    type: "select_libraray",
+    payload: libraryId
+  };
+};
+```
+
 g. Calling Action Creators</br>
+Binding ListItem dengan Action Creator, dgn rencana ke depan saat list di click akan panggil action selectLibrary</br>
+
+```
+import { selectLibrary } from "../actions";
+```
+
+```
+export default connect(null, { selectLibrary })(ListItem);
+
+```
+
 h. Adding a Touchable</br>
 i. Rules of Reducers</br>
 j. Expanding a Row</br>
