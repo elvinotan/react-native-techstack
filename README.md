@@ -73,3 +73,25 @@ import App from "./src/App";
 ```
 
 f. More on Redux Boilerplate</br>
+Store > Redux framework yang berfungsi untuk menyimpan seluruh state</br>
+Provider > Perekat antara Redux dan React-Redux sebagai mekanisme komunikasi</br>
+
+# Back To React
+
+Agar component commment bisa di export secara gabungan</br>
+component wajib export dgn cara `export { Header };`</br>
+serta deklarasikan di bagian index.js</br>
+
+```
+export * from "./Header";
+export * from "./Card";
+export * from "./CardSection";
+```
+
+a. Rendering the Header
+b. Reducer and State Design
+c. Library List of Data
+d. JSON CopyPaste
+e. The Connect Function
+f. MapStateToProps with Connect
+g. A Quick Review and Breather
