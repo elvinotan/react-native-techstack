@@ -175,6 +175,20 @@ Mengapa kita perlu menggunkan listview untuk scrolling</br>
 ![List View](https://github.com/elvinotan/react-native-techstack/blob/master/images/listview.png)</br>
 
 b. ListView in Practice</br>
+Gunakan ListView (FlatList) untuk mengingkatkan perfomance
+
+```
+render() {
+    return (
+      <FlatList
+        data={this.props.reducer.libraries} // Data yang di passing oleh reducer
+        render={this.renderItem} // Function untuk render single data
+        keyExtractor={library => library.id} // Id Uniqeness for looping
+      />
+    );
+  }
+```
+
 c. Rendering a Single Row</br>
 d. Styling the List</br>
 e. Creating the Selection Reducer</br>
