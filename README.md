@@ -57,4 +57,19 @@ e. Application Boilerplate</br>
 Install plugin redux dan react-redux</br>
 npm install --save redux react-redux</br>
 
+```
+/src/App.js
+import React from "react";
+import { View } from "react-native";
+
+const App = () => {
+  return <View />;
+};
+
+export default App;
+
+/index.js
+import App from "./src/App";
+```
+
 f. More on Redux Boilerplate</br>
