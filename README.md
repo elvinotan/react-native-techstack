@@ -1,4 +1,5 @@
 # React-Native TechStack
+Project setup https://github.com/elvinotan/vscode-react-eslint/blob/master/README.md</br>
 
 Sample Project ini akan menjelaskan cara kerja Redux dan cara memimplementasikannya</br>
 
