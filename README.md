@@ -233,6 +233,27 @@ const styles = {
 ```
 
 e. Creating the Selection Reducer</br>
+Untuk membuat reducer wajib mengembalikan sesuatu dan sesuatu itu tidak boleh undefine, untuk data initial biasanya gunakan null, null != undefine</br>
+
+```
+/src/reducers/SelectionReducer.js
+// untuk awal awal return null
+export default () => {
+  return null;
+};
+```
+
+```
+import { combineReducers } from "redux";
+import LibraryReducer from "./LibraryReducer";
+import SelectionReducer from "./SelectionReducer";
+
+export default combineReducers({
+  libraries: LibraryReducer,
+  selectedLibraryId: SelectionReducer // tambah reducer untuk library yang di pilih
+});
+```
+
 f. Introducing Action Creators</br>
 g. Calling Action Creators</br>
 h. Adding a Touchable</br>

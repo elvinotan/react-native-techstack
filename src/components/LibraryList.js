@@ -23,7 +23,8 @@ class LibraryList extends Component {
 const mapStateToPros = state => {
   return {
     reducer: {
-      libraries: state.libraries
+      libraries: state.libraries,
+      selectedLibraryId: state.selectedLibraryId
     }
   };
 };
