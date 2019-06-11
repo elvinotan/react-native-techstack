@@ -305,6 +305,7 @@ return (
 i. Rules of Reducers</br>
 Action Sudah kita panggil saatnya untuk passing ke reducers</br>
 Untuk menghindari type action name, kita menggunakan constant</br>
+Reducer mewajibkan kita untuk selalu return new state, hal ini bertujuan untuk mengetahui apakah ada perubahan state atau tidak</br>
 
 ```
 import { select_library } from "../actions/actions";
