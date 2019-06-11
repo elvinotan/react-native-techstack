@@ -3,8 +3,19 @@ import { View } from "react-native";
 import { connect } from "react-redux";
 
 class LibraryList extends Component {
+  showDetail() {
+    this.prop;
+  }
+
   render() {
     return <View />;
   }
 }
-export default connect()(LibraryList);
+
+const mapStateToPros = state => {
+  return {
+    libraries: state.libraries
+  };
+};
+
+export default connect(mapStateToPros)(LibraryList);
