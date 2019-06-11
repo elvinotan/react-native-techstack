@@ -168,6 +168,12 @@ g. A Quick Review and Breather</br>
 # Rendering Lists the Right Way
 
 a. The Theory of ListView</br>
+Behavior Non List View Component</br>
+![Non List View](https://github.com/elvinotan/react-native-techstack/blob/master/images/nonlistview.png)</br>
+
+Mengapa kita perlu menggunkan listview untuk scrolling</br>
+![List View](https://github.com/elvinotan/react-native-techstack/blob/master/images/listview.png)</br>
+
 b. ListView in Practice</br>
 c. Rendering a Single Row</br>
 d. Styling the List</br>
