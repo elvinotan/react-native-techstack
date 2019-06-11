@@ -108,7 +108,29 @@ b. Reducer and State Design</br>
 ![State Design 2](https://github.com/elvinotan/react-native-techstack/blob/master/images/statedesign2.png)</br>
 
 c. Library List of Data</br>
+Persiapkan js file untuk handle reducer</br>
+Yang Perlu di ingat adalah :
+Action => Adalah js Object</br>
+Reducer => Adalah function yang return js Object</br>
+
+```
+/src/reducers/index.js
+import { combineReducers } from "redux";
+import { LibraryReducer } from "./LibraryReducer";
+
+export default combineReducers({
+  libraries: LibraryReducer
+});
+```
+
+```
+/src/reducers/LibraryReducer.js
+export default () => [];
+```
+
 d. JSON CopyPaste</br>
+Copy paster object data, pada app ini kita tidak menggunakan remote call rest, tetapi menggunakan file sebagai sumber data</br>
+
 e. The Connect Function</br>
 f. MapStateToProps with Connect</br>
 g. A Quick Review and Breather</br>
