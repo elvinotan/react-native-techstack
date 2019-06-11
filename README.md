@@ -211,6 +211,27 @@ renderItem(library) {
 ```
 
 d. Styling the List</br>
+
+```
+class ListItem extends Component {
+  render() {
+    const { titleStyle } = styles;
+    return (
+      <CardSection>
+        <Text style={titleStyle}>{this.props.library.item.title}</Text>
+      </CardSection>
+    );
+  }
+}
+
+const styles = {
+  titleStyle: {
+    fontSize: 18,
+    paddingLeft: 15
+  }
+};
+```
+
 e. Creating the Selection Reducer</br>
 f. Introducing Action Creators</br>
 g. Calling Action Creators</br>
