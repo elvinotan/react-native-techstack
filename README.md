@@ -167,16 +167,16 @@ g. A Quick Review and Breather</br>
 
 # Rendering Lists the Right Way
 
-a. The Theory of ListView
-b. ListView in Practice
-c. Rendering a Single Row
-d. Styling the List
-e. Creating the Selection Reducer
-f. Introducing Action Creators
-g. Calling Action Creators
-h. Adding a Touchable
-i. Rules of Reducers
-j. Expanding a Row
-k. Moving Logic Out of Components
-l. Animations
-m. Wrapup
+a. The Theory of ListView</br>
+b. ListView in Practice</br>
+c. Rendering a Single Row</br>
+d. Styling the List</br>
+e. Creating the Selection Reducer</br>
+f. Introducing Action Creators</br>
+g. Calling Action Creators</br>
+h. Adding a Touchable</br>
+i. Rules of Reducers</br>
+j. Expanding a Row</br>
+k. Moving Logic Out of Components</br>
+l. Animations</br>
+m. Wrapup</br>
