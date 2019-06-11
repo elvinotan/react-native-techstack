@@ -164,3 +164,19 @@ Data yang di return dari fungcion mapStateToPros dapat di access dari this.props
 
 g. A Quick Review and Breather</br>
 ![Review](https://github.com/elvinotan/react-native-techstack/blob/master/images/review.png)</br>
+
+# Rendering Lists the Right Way
+
+a. The Theory of ListView
+b. ListView in Practice
+c. Rendering a Single Row
+d. Styling the List
+e. Creating the Selection Reducer
+f. Introducing Action Creators
+g. Calling Action Creators
+h. Adding a Touchable
+i. Rules of Reducers
+j. Expanding a Row
+k. Moving Logic Out of Components
+l. Animations
+m. Wrapup
