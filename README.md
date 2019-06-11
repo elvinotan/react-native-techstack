@@ -132,5 +132,20 @@ d. JSON CopyPaste</br>
 Copy paster object data, pada app ini kita tidak menggunakan remote call rest, tetapi menggunakan file sebagai sumber data</br>
 
 e. The Connect Function</br>
+Untuk menghubungkan antara action, reducer dengan react-native kita menggunkan connect yang beradal dari react-redux</br>
+
+```
+import React, { Component } from "react";
+import { View } from "react-native";
+import { connect } from "react-redux";
+
+class LibraryList extends Component {
+  render() {
+    return <View />;
+  }
+}
+export default connect()(LibraryList);
+```
+
 f. MapStateToProps with Connect</br>
 g. A Quick Review and Breather</br>
