@@ -88,10 +88,27 @@ export * from "./Card";
 export * from "./CardSection";
 ```
 
-a. Rendering the Header
-b. Reducer and State Design
-c. Library List of Data
-d. JSON CopyPaste
-e. The Connect Function
-f. MapStateToProps with Connect
-g. A Quick Review and Breather
+a. Rendering the Header</br>
+
+```
+const App = () => {
+  return (
+    <Provider store={createStore(reducers)}>
+      <View>
+        <Header headerText={"Tech Stack"} />
+      </View>
+    </Provider>
+  );
+};
+```
+
+b. Reducer and State Design</br>
+![State Design](https://github.com/elvinotan/react-native-techstack/blob/master/images/statedesign.png)</br>
+
+![State Design 2](https://github.com/elvinotan/react-native-techstack/blob/master/images/statedesign2.png)</br>
+
+c. Library List of Data</br>
+d. JSON CopyPaste</br>
+e. The Connect Function</br>
+f. MapStateToProps with Connect</br>
+g. A Quick Review and Breather</br>
