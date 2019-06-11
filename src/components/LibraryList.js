@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import { View, Text, FlatList } from "react-native";
 import { connect } from "react-redux";
 import { Card, CardSection } from "./commons";
+import { ListItem } from "./ListItem";
 
 class LibraryList extends Component {
-  renderItem(item) {}
+  renderItem(library) {
+    return <ListItem library={library} />;
+  }
 
   render() {
     return (

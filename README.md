@@ -190,6 +190,26 @@ render() {
 ```
 
 c. Rendering a Single Row</br>
+Persiapkan placeholder untuk render Single Row dalam bentuk Component</br>
+
+```
+import React, { Component } from "react";
+
+class ListItem extends Component {
+  render() {
+    return null;
+  }
+}
+
+export default ListItem;
+```
+
+```
+renderItem(library) {
+  return <ListItem library={library} />;
+}
+```
+
 d. Styling the List</br>
 e. Creating the Selection Reducer</br>
 f. Introducing Action Creators</br>
