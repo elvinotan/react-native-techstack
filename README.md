@@ -323,6 +323,32 @@ export default (state = null, action) => {
 ```
 
 j. Expanding a Row</br>
+Buat logic pada saat render, apabila yang dipilih sama dgn data yang di looping, maka tambahkan componet</br>
+
+```
+renderExpand(selected, desription) {
+    return selected ? <Text>{desription}</Text> : null;
+  }
+
+  render() {
+    const { titleStyle } = styles;
+    const { selectLibrary, selectedLibraryId } = this.props;
+    const { title, id, description } = this.props.library.item;
+    const selected = id === selectedLibraryId;
+
+    return (
+      <TouchableWithoutFeedback onPress={() => selectLibrary(id)}>
+        <View>
+          <CardSection>
+            <Text style={titleStyle}>{title}</Text>
+          </CardSection>
+          {this.renderExpand(selected, description)}
+        </View>
+      </TouchableWithoutFeedback>
+    );
+  }
+```
+
 k. Moving Logic Out of Components</br>
 l. Animations</br>
 m. Wrapup</br>

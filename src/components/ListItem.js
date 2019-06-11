@@ -14,7 +14,7 @@ class ListItem extends Component {
     const { selectLibrary, selectedLibraryId } = this.props;
     const { title, id, description } = this.props.library.item;
     const selected = id === selectedLibraryId;
-    console.log(selectedLibraryId);
+
     return (
       <TouchableWithoutFeedback onPress={() => selectLibrary(id)}>
         <View>
