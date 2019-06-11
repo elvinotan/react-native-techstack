@@ -350,5 +350,15 @@ renderExpand(selected, desription) {
 ```
 
 k. Moving Logic Out of Components</br>
+Kalo kita lihat coding di atas untuk mengecek data render description atau tidak kita memanipulasi logic dgn 2 variable, hal ini seperti mengkotori jsx, kita dapat mempersingkat dengan memindahkan logic tersebut pada mapStateToProps</br>
+
+```
+const mapStateToPros = (state, ownProps) => {
+  return {
+    expanded: state.selectedLibraryId == ownProps.library.index
+  };
+};
+```
+
 l. Animations</br>
 m. Wrapup</br>
