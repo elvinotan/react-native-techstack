@@ -5,17 +5,23 @@ import { selectLibrary } from "../actions";
 import { connect } from "react-redux";
 
 class ListItem extends Component {
+  renderExpand(selected, desription) {
+    return selected ? <Text>{desription}</Text> : null;
+  }
+
   render() {
     const { titleStyle } = styles;
-    const { selectLibrary } = this.props;
-    const { title, id } = this.props.library.item;
-
+    const { selectLibrary, selectedLibraryId } = this.props;
+    const { title, id, description } = this.props.library.item;
+    const selected = id === selectedLibraryId;
+    console.log(selectedLibraryId);
     return (
       <TouchableWithoutFeedback onPress={() => selectLibrary(id)}>
         <View>
           <CardSection>
             <Text style={titleStyle}>{title}</Text>
           </CardSection>
+          {this.renderExpand(selected, description)}
         </View>
       </TouchableWithoutFeedback>
     );
@@ -31,9 +37,7 @@ const styles = {
 
 const mapStateToPros = state => {
   return {
-    reducer: {
-      selectedLibraryId: state.selectedLibraryId
-    }
+    selectedLibraryId: state.selectedLibraryId
   };
 };
 

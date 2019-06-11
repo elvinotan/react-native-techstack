@@ -306,6 +306,7 @@ i. Rules of Reducers</br>
 Action Sudah kita panggil saatnya untuk passing ke reducers</br>
 Untuk menghindari type action name, kita menggunakan constant</br>
 Reducer mewajibkan kita untuk selalu return new state, hal ini bertujuan untuk mengetahui apakah ada perubahan state atau tidak</br>
+<b>Jangan Rancu dengan yang di kembalikan, yang di kembalikan nilai nya, bukan stuktur dari propertynya</b></br>
 
 ```
 import { select_library } from "../actions/actions";
@@ -313,7 +314,7 @@ import { select_library } from "../actions/actions";
 export default (state = null, action) => {
   switch (action.type) {
     case select_library: {
-      return { ...state, selectedLibraryId: action.payload };
+      return action.payload;
     }
     default:
       return state;
