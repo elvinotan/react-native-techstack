@@ -163,3 +163,4 @@ export default connect(mapStateToPros)(LibraryList);
 Data yang di return dari fungcion mapStateToPros dapat di access dari this.props.libraries</br>
 
 g. A Quick Review and Breather</br>
+![Review](https://github.com/elvinotan/react-native-techstack/blob/master/images/review.png)</br>

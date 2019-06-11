@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import { connect } from "react-redux";
 
 class LibraryList extends Component {
   showDetail() {
-    this.prop;
+    return this.props.libraries.map((obj, i) => {
+      return <Text>{obj.title}</Text>;
+    });
   }
 
   render() {
-    return <View />;
+    return <View>{this.showDetail()}</View>;
   }
 }
 
