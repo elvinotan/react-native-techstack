@@ -1,22 +1,29 @@
 import React, { Component } from "react";
 import { View, Text } from "react-native";
 import { connect } from "react-redux";
+import { Card, CardSection } from "./commons";
 
 class LibraryList extends Component {
   showDetail() {
-    return this.props.libraries.map((obj, i) => {
-      return <Text>{obj.title}</Text>;
+    return this.props.reducer.libraries.map((obj, i) => {
+      return (
+        <CardSection key={obj.id}>
+          <Text>{obj.title}</Text>
+        </CardSection>
+      );
     });
   }
 
   render() {
-    return <View>{this.showDetail()}</View>;
+    return <Card>{this.showDetail()}</Card>;
   }
 }
 
 const mapStateToPros = state => {
   return {
-    libraries: state.libraries
+    reducer: {
+      libraries: state.libraries
+    }
   };
 };
 
