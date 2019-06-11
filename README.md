@@ -281,6 +281,27 @@ export default connect(null, { selectLibrary })(ListItem);
 ```
 
 h. Adding a Touchable</br>
+Pada saat ini kita sudah memiliki action yang attach ke props yaitu selectLibrary, saaatnya untuk panggil function tsb</br>
+Note :</br>
+Untuk pemanggilan function pastikan buat empty function yang memeanggil action creator</br>
+
+```
+onPress={() => selectLibrary(id)} //success
+onPress={selectLibrary(id)} // error
+```
+
+```
+return (
+  <TouchableWithoutFeedback onPress={() => selectLibrary(id)}>
+    <View>
+      <CardSection>
+        <Text style={titleStyle}>{title}</Text>
+      </CardSection>
+    </View>
+  </TouchableWithoutFeedback>
+);
+```
+
 i. Rules of Reducers</br>
 j. Expanding a Row</br>
 k. Moving Logic Out of Components</br>
